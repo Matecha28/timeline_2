@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Tiempo Interactiva</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h2>Línea de Tiempo Interactiva: Proceso para la Aprobación de la Ley Contra el Matrimonio Infantil en Perú</h2>
+    <div id="timeline"></div>
+
+    <script>
+        var data = [{
+            type: 'scatter',
+            mode: 'markers',
+            x: ['2018', '2019', '2020', '2021', '2022', '2023'],
+            y: ['Investigación y Concienciación', 'Publicación de Resultados', 'Proyecto con la Cooperación Española', 'Desarrollo de la Propuesta de Ley', 'Testimonios en el Congreso', 'Debate y Votación', 'Programas de Educación y Sensibilización'],
+            text: ['Estudios iniciales y difusión de información',
+                   'Reporte de avances y comparación de estadísticas del matrimonio infantil',
+                   'Fortalecimiento de la incidencia política',
+                   'Asistencia técnica al Congreso',
+                   'Últimos informes y reformación, comparten los testimonios',
+                   'Implementación efectiva de la ley y monitoreo'],
+            marker: {
+                size: 16,
+                color: 'orange' // Cambia el color de los marcadores a anaranjado
+            }
+        }];
+
+        var layout = {
+            title: 'Línea de Tiempo Interactiva: Proceso para la Aprobación de la Ley Contra el Matrimonio Infantil en Perú',
+            xaxis: {
+                title: 'Fecha'
+            },
+            yaxis: {
+                title: 'Tarea',
+                automargin: true
+            }
+        };
+
+        Plotly.newPlot('timeline', data, layout);
+    </script>
+</body>
+</html>
